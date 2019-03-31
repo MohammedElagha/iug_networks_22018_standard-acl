@@ -1,0 +1,8 @@
+enable
+show ip access-lists
+config t
+access-list 2 deny 192.168.1.3 0.0.0.0
+access-list 2 deny 192.168.4.0 0.0.0.255
+permit any
+interface (fastethernet or serial)
+ip access-group 2 out
